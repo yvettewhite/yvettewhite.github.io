@@ -1,0 +1,471 @@
+body {
+    background-color: #79B791;
+    color:whitesmoke
+}
+.navbar {
+  background-color: #79B791;    
+  padding: 0px;
+}
+
+.navbar ul {
+  list-style: none;             
+  margin: 0;
+  padding: 0;
+  display: flex;                
+  justify-content: center;      
+  gap: 30px;                    
+}
+
+.navbar a {
+  text-decoration: none;        
+  color: black;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  transition: color 0.3s;
+  background: none;            /* Removed default background color */
+  border: none;                /* Removed any borders */
+  outline: none;               /* Removed the outline box */
+  padding: 5px;                /* Optional: small clickable area */
+}
+
+.navbar a:hover {
+  color: #A3B18A;              
+}
+
+.fixed-navbar {
+ position: fixed;
+ top: 0;
+ left: 0; /*this was the fix to move the nav bar from the left and centered using width: 100%; */
+ width: 100%;
+ display: flex;
+ text-align: center;
+ justify-content: center;
+}
+
+/*this is to make the scroll/jumps more smooth */
+
+html {
+  scroll-behavior: smooth;
+} 
+
+/* the header is spaced it the center but needs to be larger, when I increase the font size
+or letter spacing it puts the wording on two lines, so hmmm, how to fix it */
+.header{
+    background-color: #79B791;
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 100px;
+    font-size: large;
+    font-style: italic;
+    font-family: garden 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80px;
+    margin-top: 5px;
+    letter-spacing: 20px;
+    font-weight: lighter; 
+  }
+
+
+  
+/*this is for the 3 images at the tope of the screen */
+  .image-container {
+  display: flex;
+  justify-content: space-between; /* even spacing across the screen */
+  align-items: center;
+  padding: 10px;
+  background-color: #79B791;
+}
+
+.image-container img {
+  height: 495px;
+  width: 432px;
+}
+
+/*this is the "Welcome to My Yard" title  when it was in the center under the 3 pic
+but now I am going to temp change it up and move this so keep the code in case I 
+go back to it 
+  .welcome-section {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+  }
+
+
+.welcome-section {
+  background-color: #79B791;
+  color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: 12px;
+}
+*/
+
+/*this section for welcome section is working */
+.welcome-section {
+  padding: 40px;
+  background-color: #79B791;
+  color: #333;
+}
+
+.welcome-info {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.welcome-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.welcome-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+.before-before-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* I don't need this for a computer screen and not a phone?, 
+  ChatGPT suggested it and I don't know what it does so took it out
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0; /* Optional background */
+}
+
+.photo-block {
+  flex: 1 1 45%; /* Flex-grow, flex-shrink, flex-basis */
+  text-align: center;
+}
+
+.photo-block img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.caption {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #344E41;
+}
+
+
+/* this section is from chat gpt and is trying to help me figure out how to better format
+the before and after pictures */
+.before-section {
+  background-color: #f5f5f5; /* light background */
+  padding: 10px 0;
+}
+
+/*this is the BEFORE image I want to make much larger and the changes did this */
+.before-container {
+  display: flex;
+  align-items: center;       /* centers image and text vertically */
+  justify-content: center;   /* centers the whole block horizontally */
+  gap: 40px;                 /* space between image and text */
+  max-width: 1200px;         /* keeps layout from stretching too wide */
+  margin: 0 auto;            /* centers container */
+  padding: 5px;
+}
+
+.before-container img {
+  width: 60%;                /* image takes up about half the space , was 45%*/
+  max-width: 700px; /*was 450 px*/
+  height: auto; /*ok this is good because it keep the aspect ratio perfect*/
+  border-radius: 8px;        /* soft corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.before-text {
+  width: 45%;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.before-text h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #2e8b57;
+}
+
+.before-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+
+
+
+/*this is for the 4 seasons area on the page */
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature-box {
+  background-color: #f0f0f0;
+  color: red;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.feature-box h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+.feature-box p {
+  font-size: 1rem;
+  color: #333;
+}
+ /*this was from chat gpt*/
+.feature-box img {
+  width: 100%;           /* makes image fill the box width */
+  height: 200px;         /* keeps all images consistent in height */
+  object-fit: cover;     /* crops nicely without stretching */
+  border-radius: 6px;    /* matches your box’s rounded corners */
+  margin-bottom: 10px;   /* space between image and title */
+  transition: transform 0.3s ease; /*when images are inserted see if this is working???*/
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /*I don't really know what this does */
+}
+
+
+
+/* This is the Flower Section */
+
+.flower-section {
+  padding: 40px;
+  background-color: #dad7cd;
+  color: #333;
+}
+
+.flower-info {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.flower-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.flower-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/*this section for TREES is working */
+.tree-section {
+  padding: 40px;
+  background-color: #f0f4f1;
+  color: #333;
+}
+
+.tree-info {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.tree-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.tree-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+ 
+/*this section for EVERGREENS is working */
+.evergreen-tree-section {
+  padding: 40px;
+  background-color: #79B791;
+  color: #344E41;
+}
+
+.evergreen-tree-info {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.evergreen-tree-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.evergreen-tree-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+.plant-care-section {
+  padding: 40px;
+  background-color: #dad7cd;
+  color: #344E41;
+}
+
+.plant-care-info {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.plant-care-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.plant-care-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* this is for a video section */
+.video-section {
+  text-align: center;
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.video-section video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.video-section h1 {
+
+  
+}
+]
+.video-section p {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+
+
+/*this is for the 3 pictures in the middle had to force the sizing to be the same , ugh */
+
+/*this is what I had and had to put back in because couldn't figure out the 3 */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.post__gallery {
+  display: grid;
+  grid-template-columns: 2fr 3fr; /* left column smaller, right column larger */
+  grid-template-rows: 1fr 1fr;    /* two stacked rows for left images */
+  gap: 10px;                      /* small gap between images */
+  width: 95vw;                     /* almost full viewport width */
+  height: 90vh;                    /* almost full viewport height */
+  margin: 5vh auto;                /* vertical centering and horizontal margin */
+}
+
+.post__gallery-item:nth-child(1) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.post__gallery-item:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.post__gallery-item:nth-child(3) {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+}
+
+.post__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;       /* ensures images fill their boxes without stretching */
+  display: block;
+  border-radius: 6px;      /* optional: soft corners */
+  transition: transform 0.3s ease;
+}
+
+.post__gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* this section is for the footer and is working  sort of, now it is 
+centered but I needed to match the class name*/
+footer {
+    background-color: #79B791;
+}
+a {
+    color: black;
+    background-color: #588157;
+}
+a:hover {
+  color: whitesmoke;
+  background-color: #3a5a40;
+  transition: all 0.3s ease;
+}
+.centered {
+  max-width: 500px;
+  text-align: center;
+  margin: 0 auto; /* centers the container */
+}
+
+.block {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+ /*this code is not centering the text and when I play with this it messes up the Leaf and Soil header
+.block{
+    display: flex;
+     justify-content: center;   
+     text-align: center;
+     width: 100%
+}
+     */
