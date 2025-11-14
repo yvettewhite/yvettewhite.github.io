@@ -43,6 +43,49 @@ body {
   color: #A3B18A;              
 }
 
+/*this is the sketch section, the start of it all*/
+
+.sketch-section {
+  background-color: #f5f5f5; /* light background */
+  padding: 10px 0;
+}
+.sketch-container {
+  display: flex;
+  align-items: center;       /* centers image and text vertically */
+  justify-content: center;   /* centers the whole block horizontally */
+  gap: 40px;                 /* space between image and text */
+  max-width: 1200px;         /* keeps layout from stretching too wide */
+  margin: 0 auto;            /* centers container */
+  padding: 5px;
+}
+
+.sketch-container img {
+  width: 60%;                /* image takes up about half the space , was 45%*/
+  max-width: 450px; /*was 450 px*/
+  height: auto; /*ok this is good because it keep the aspect ratio perfect*/
+  border-radius: 8px;        /* soft corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.sketch-text {
+  width: 45%;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.sketch-text h2 {
+  margin-bottom: 10px;
+  font-size: 28px;
+  color: #2e8b57;
+  font-weight: lighter;
+}
+
+.sketch-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
 .slide-image {
   width: 400px;     /* or any size you prefer */
   height: auto;     /* keeps aspect ratio */
