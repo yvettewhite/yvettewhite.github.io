@@ -70,11 +70,12 @@ html {
 
 /* styling the word “and”  different than Soil or Leaf */
 .logo .header-and {
-  font-family: 'Trebuchet MS', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-size: 30px;
   margin: 0 8px;
   letter-spacing: 0px;
+  font-weight: 100;
 }
 
 
@@ -131,69 +132,29 @@ html {
 
 /* this section is figuring out how to better format
 the before and after pictures */
-
-.sketch-section {
-  background-color: #f5f5f5; /* light background */
-  padding: 10px 0;
-}
-.sketch-container {
-  display: flex;
-  align-items: center;       /* centers image and text vertically */
-  justify-content: center;   /* centers the whole block horizontally */
-  gap: 40px;                 /* space between image and text */
-  max-width: 1200px;         /* keeps layout from stretching too wide */
-  margin: 0 auto;            /* centers container */
-  padding: 5px;
-}
-
-.sketch-container img {
-  width: 60%;                /* image takes up about half the space , was 45%*/
-  max-width: 450px; /*was 450 px*/
-  height: auto; /*ok this is good because it keep the aspect ratio perfect*/
-  border-radius: 8px;        /* soft corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.sketch-text {
-  width: 45%;
-  font-family: Arial, sans-serif;
-  color: #333;
-}
-
-.sketch-text h2 {
-  margin-bottom: 10px;
-  font-size: 28px;
-  color: #2e8b57;
-  font-weight: lighter;
-}
-
-.sketch-text p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
+/*
 .before-section {
   background-color: #f5f5f5; /* light background */
-  padding: 10px 0;
+ /* padding: 10px 0;
 }
 
 /*this is the BEFORE image I want to make much larger and the changes did this */
-.before-container {
+/*.before-container {
   display: flex;
   align-items: center;       /* centers image and text vertically */
-  justify-content: center;   /* centers the whole block horizontally */
-  gap: 40px;                 /* space between image and text */
-  max-width: 1200px;         /* keeps layout from stretching too wide */
-  margin: 0 auto;            /* centers container */
-  padding: 5px;
+  /*justify-content: center;   /* centers the whole block horizontally */
+  /*gap: 40px;                 /* space between image and text */
+  /*max-width: 1200px;         /* keeps layout from stretching too wide */
+  /*margin: 0 auto;            /* centers container */
+  /*padding: 5px;
 }
 
 .before-container img {
   width: 60%;                /* image takes up about half the space , was 45%*/
-  max-width: 700px; /*was 450 px*/
-  height: auto; /*ok this is good because it keep the aspect ratio perfect*/
-  border-radius: 8px;        /* soft corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+ /* max-width: 700px; /*was 450 px*/
+ /* height: auto; /*ok this is good because it keep the aspect ratio perfect*/
+  /*border-radius: 8px;        /* soft corners */
+  /*box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .before-text {
@@ -216,29 +177,29 @@ the before and after pictures */
 
 /*here is where I am trying to add in an after image*/
 
-.after-section {
+/*.after-section {
   background-color: #f5f5f5; /* light background */
-  padding: 10px 0;
+  /*padding: 10px 0;
 }
 
 /*this is the BEFORE image I want to make much larger and the changes did this */
-.after-container {
+/*.after-container {
   display: flex;
   align-items: center;       /* centers image and text vertically */
-  justify-content: center;   /* centers the whole block horizontally */
-  flex-direction: row-reverse; /*ahh, this did the mirror image*/
-  gap: 40px;                 /* space between image and text */
-  max-width: 1200px;         /* keeps layout from stretching too wide */
-  margin: 0 auto;            /* centers container */
-  padding: 5px;
+  /*justify-content: center;   /* centers the whole block horizontally */
+  /*flex-direction: row-reverse; /*ahh, this did the mirror image*/
+  /*gap: 40px;                 /* space between image and text */
+  /*max-width: 1200px;         /* keeps layout from stretching too wide */
+ /* margin: 0 auto;            /* centers container */
+ /* padding: 5px;
 }
 
 .after-container img {
   width: 60%;                /* image takes up about half the space , was 45%*/
-  max-width: 700px; /*was 450 px*/
-  height: auto; /*ok this is good because it keep the aspect ratio perfect*/
-  border-radius: 8px;        /* soft corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  /*max-width: 700px; /*was 450 px*/
+  /*height: auto; /*ok this is good because it keep the aspect ratio perfect*/
+  /*border-radius: 8px;        /* soft corners */
+  /*box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .after-text {
@@ -260,21 +221,116 @@ the before and after pictures */
 }
 
 
-/*Wedding video section*/
-.wedding-video {
-  display: flex;              /* enable flexbox */
-  justify-content: center;    /* horizontal center */
-  align-items: center;        /* vertical center */
-  padding: 40px 0;            /* optional vertical spacing */
+/*test on a slideshow, wow, I really like this but don't understand the nth child part, hmm*/
+.transformation-slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
+/* Slide styling */
+.transformation-slideshow .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: fade 10s infinite;
+}
+
+/* Stagger slides */
+.transformation-slideshow .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.transformation-slideshow .slide:nth-child(2) {
+  animation-delay: 5s;
+}
+
+.transformation-slideshow img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text overlay */
+.slide-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  max-width: 40%;
+}
+
+.slide-text h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+}
+
+.slide-text p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Keyframes for fade effect */
+@keyframes fade {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/*this is for the two insta videos*/
+.video-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;   /* align videos at top */
+  background-color: rgb(76, 73, 73);;
+}
+
+.video-box {
+  flex: 1 1 45%;
+  max-width: 70%;
+  aspect-ratio: 16 / 9;       /* ensures equal box size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-box video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;         /* preserves full video, no cropping */
+  border-radius: 10px;
+}
+
+
+
+/*Wedding video section*/
+/*
+.wedding-video {
+  display: flex;              
+  justify-content: center;    /* horizontal center */
+  /*align-items: center;        /* vertical center */
+  /*padding: 40px 0;            /* optional vertical spacing */
+/*}
 
 .wedding-video video {
   width: 80%;                 /* scale video to 80% of container width */
-  max-width: 800px;           /* optional max size */
-  height: auto;               /* maintain aspect ratio */
-  border-radius: 10px;        /* optional rounded corners */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* optional shadow */
-}
+  /*max-width: 800px;           /* optional max size */
+  /*height: auto;               /* maintain aspect ratio */
+  /*border-radius: 10px;        /* optional rounded corners */
+ /* box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* optional shadow */
+/*}
 
 
 
@@ -288,7 +344,7 @@ the before and after pictures */
 
 .feature-box {
   background-color: #f0f0f0;
-  color: red;
+  color: rgb(76, 73, 73);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -304,14 +360,14 @@ the before and after pictures */
   font-size: 1rem;
   color: #333;
 }
- /*this was from chat gpt*/
+ 
 .feature-box img {
   width: 100%;           /* makes image fill the box width */
   height: 200px;         /* keeps all images consistent in height */
   object-fit: cover;     /* crops nicely without stretching */
   border-radius: 6px;    /* matches your box’s rounded corners */
   margin-bottom: 10px;   /* space between image and title */
-  transition: transform 0.3s ease; /*when images are inserted see if this is working???*/
+  transition: transform 0.3s ease; /* hmm, not sure how this transition is working
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /*I don't really know what this does */
 }
 
