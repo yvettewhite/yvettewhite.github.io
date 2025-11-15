@@ -351,7 +351,7 @@ the before and after pictures */
   text-align: center;
 }
 
-.feature-box h3 {
+.feature-box h3 {]
   margin-top: 0;
   font-size: 1.2rem;
 }
@@ -371,9 +371,78 @@ the before and after pictures */
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /*I don't really know what this does */
 }
 
+      
+
+.flower-section {
+  padding: 40px;
+  background-color: #dad7cd;
+  color: #333;
+}
+
+/* FLEX ROW: Text left, Image right */
+.flower-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* TEXT AREA */
+.flower-info {
+  flex: 1;
+  font-family: Arial, sans-serif;
+}
+
+.flower-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: lighter;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.flower-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.flower-info ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.flower-info li {
+  margin-bottom: 6px;
+  font-size: 17px;
+}
+
+/* IMAGE AREA */
+.flower-image {
+  flex: 1;
+}
+
+.flower-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE STACKING */
+@media (max-width: 768px) {
+  .flower-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .flower-image img {
+    max-width: 90%;
+  }
+}
 
 
-/* This is the Flower Section */
+
+/* This is the Flower Section when it was in the List style and I had 3 boxes of it
 
 .flower-section {
   padding: 40px;
@@ -390,18 +459,77 @@ the before and after pictures */
 .flower-info h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  font-weight: lighter;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .flower-info p {
   font-size: 18px;
   line-height: 1.6;
 }
+*/
 
-
-/*this section for TREES is working */
 .tree-section {
   padding: 40px;
-  background-color: #f0f4f1;
+  background-color: whitesmoke;
+  color: #333;
+}
+
+/* NEW FLEX WRAPPER */
+.tree-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* IMAGE ON LEFT */
+.tree-image {
+  flex: 1;
+}
+
+.tree-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* TEXT ON RIGHT */
+.tree-info {
+  flex: 1;
+  font-family: Arial, sans-serif;
+}
+
+.tree-info h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+}
+
+.tree-info p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.tree-info ul li {
+  margin-bottom: 6px;
+}
+
+
+
+  .tree-image img {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/*this section for TREES is working 
+.tree-section {
+  padding: 40px;
+  background-color: whitesmoke;
   color: #333;
 }
 
@@ -414,13 +542,16 @@ the before and after pictures */
 .tree-info h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
 }
 
 .tree-info p {
   font-size: 18px;
   line-height: 1.6;
 }
- 
+*/
+
 /*this section for EVERGREENS is working */
 .evergreen-tree-section {
   padding: 40px;
@@ -432,43 +563,27 @@ the before and after pictures */
   max-width: 800px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
+  color: #333;
 }
 
 .evergreen-tree-info h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  font-feature-settings: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;
+  color: #333;
 }
 
 .evergreen-tree-info p {
   font-size: 18px;
   line-height: 1.6;
+  color: #333;
 }
 
 
-.plant-care-section {
-  padding: 40px;
-  background-color: #dad7cd;
-  color: #344E41;
-}
-
-.plant-care-info {
-  max-width: 800px;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-}
-
-.plant-care-info h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.plant-care-info p {
-  font-size: 18px;
-  line-height: 1.6;
-}
-
-/* this is for the winter in the garden video section */
-.video-section {
+/* this is for the winter in the garden video section  whne it was a standalone video, but
+I don't think I am using this anymore*/
+/*.video-section {
   text-align: center;
   margin: 3rem auto;
   max-width: 800px;
@@ -484,7 +599,8 @@ the before and after pictures */
 
 .video-section h2 {
   color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: lighter;;
   font-size: 30px;
 }
 
@@ -494,11 +610,6 @@ the before and after pictures */
   max-width: 800px;
   padding: 0;
 }
-
-
-
-
-
 
 
  /* this is for the 3 images on the bottom that I was trying to do in a 2 to 1 grid */
@@ -543,6 +654,31 @@ the before and after pictures */
   transform: scale(1.05);
 }
 
+/*this is putting the video in the 2 1 grid layout*/
+.video-wrapper {
+  position: relative; /* Make this container the reference for the overlay */
+  display: inline-block;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.overlay-text {
+  position: absolute;   /* Position relative to .video-wrapper */
+  top: 50%;             /* Center vertically */
+  left: 50%;            /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfect centering */
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.7); /* Optional: improves visibility */
+  pointer-events: none; /* So it doesn’t block clicks on the video */
+  text-align: center;
+}
 
 
 

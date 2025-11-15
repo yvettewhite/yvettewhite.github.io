@@ -1,4 +1,4 @@
-
+/* took out the hero section for now
 .hero-text {
   text-align: center;
   position: absolute;
@@ -7,7 +7,7 @@
   transform: translate(-50%, -50%);
   color: white;
 }
-
+*/
 body {
     background-color: #dad7cd;
     color:whitesmoke
@@ -43,6 +43,14 @@ body {
   color: #A3B18A;              
 }
 
+.process-header {
+  text-align: center;
+  padding: 20px 20px;
+  color: #344E41;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 /*this is the sketch section, the start of it all*/
 
 .sketch-section {
@@ -68,7 +76,7 @@ body {
 }
 
 .sketch-text {
-  width: 45%;
+  width: 50%; /* or 55% if you want more space for text */
   font-family: Arial, sans-serif;
   color: #333;
 }
@@ -136,6 +144,17 @@ body {
 .post__gallery-item:hover img {
   transform: scale(1.05);
 }
+
+.post-gallery-text {
+  font-size: 18px;
+  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;       /* matches general text color */
+  max-width: 800px;  /* optional, to keep it from stretching too wide */
+  margin: 20px auto 0 auto;  /* top margin for spacing, centered horizontally */
+}
+
+
 
 /*hmm where does this block connect to? */
 .block {
